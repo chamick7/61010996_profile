@@ -1,0 +1,24 @@
+{% extends 'layout.html' %} {% load static %} {% block index %}
+<div class="profile">
+  <section class="profile_left">
+    <h1> >
+      <span
+        class="txt-rotate"
+        data-period="2000"
+        data-rotate='[ "Who Am I?", "I am Developer." ]'
+      ></span>
+    </h1>
+    <ul class="profile_left_icon">
+        <li><img src="{% static 'img/codelogo.png' %}" alt="codelogo"></li>
+        <li><img src="{% static 'img/reactlogo.png' %}" alt="reactlogo"></li>
+        <li><img src="{% static 'img/nodejslogo.png' %}" alt="reactlogo"></li>
+        <li><img src="{% static 'img/dockerlogo.png' %}" alt="reactlogo"></li>
+        <li><img src="{% static 'img/mongodblogo.png' %}" alt="reactlogo"></li>
+
+    </ul>
+  </section>
+  <section class="profile_right">
+    <img src="{% static 'img/img-me.png' %}" alt="profile image" />
+  </section>
+</div>
+{% endblock %}
