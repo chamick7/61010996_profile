@@ -58,6 +58,7 @@ body{
 .profile_right h3{
     font-family: 'Source Code Pro', monospace;
     margin-top: 10px;
+    text-shadow: 3px 3px  rgba(177, 177, 177);
 }
 .profile_right img{
     width: 80%;
