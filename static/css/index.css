@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 
 html{
@@ -28,6 +29,11 @@ nav{
     z-index: 99;
 }
 
+nav i{
+    display: none !important;
+    cursor: pointer;
+}
+
 .logo{
     font-family: 'Squada One', cursive;
     font-size: 35px;
@@ -41,12 +47,22 @@ nav{
     color: #ff414d;
 }
 
+.menu{
+    width: 30%;
+    margin-right: 10vw;
+
+
+}
+
 .nav_menu{
+    font-family: 'Oswald', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-right: 10vw;
-    width: 30%;
+    width: 100%;
+}
+.nav_menu a{
+    color: black;
 }
 .nav_menu li{
     list-style: none;
@@ -55,4 +71,40 @@ nav{
 }
 .nav_menu li a{
     text-decoration: none;
+}
+
+
+@media only screen and (max-width:500px){
+
+    nav i{
+        display: block !important;
+    }
+    .menu{
+        margin-right: 0;
+        width: 50px;
+    }
+    .nav_menu{
+        position: absolute;
+        display: none;
+        top: 70px;
+        left: 5vw;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 2px 2px 2px rgba(177, 177, 177);
+        align-items: center;
+        width: 90vw;
+        border-radius: 0 0 5px 5px;
+    }
+    .nav_menu li{
+        margin: 3px 0;
+        width: 100%;
+        background-color: #ffae52;  
+        text-align: center;
+    }
+    .nav_menu a{
+        width: 100%;
+    }
+
+
 }

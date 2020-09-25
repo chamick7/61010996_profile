@@ -5,6 +5,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'img/mymicklogo.png' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
     <link rel="stylesheet" href="{% static 'css/education.css' %}" />
@@ -16,23 +25,26 @@
       <span class="logo">
         <a href="{% url 'home' %}">My<span>M</span>ick</a>
       </span>
-      <ul class="nav_menu">
-        <li>
-          <a href="#">Profile</a>
-        </li>
-        <li>
-          <a href="#education">Education</a>
-        </li>
-        <li>
-          <a href="">Profile</a>
-        </li>
-      </ul>
+      <span class="menu">
+        <ul class="nav_menu">
+          <a href="#">
+            <li>
+              Profile
+            </li>
+          </a>
+          <a href="#education">
+            <li>
+              Education
+            </li>
+          </a>
+          
+        </ul>
+        <i class="fa fa-bars" onclick="shownav()"></i>
+      </span>
     </nav>
     {% block index %}{% endblock %}
-    
 
     <script src="{% static 'js/textPrint.js' %}"></script>
     <script src="{% static 'js/myscript.js' %}"></script>
   </body>
 </html>
-
