@@ -1,5 +1,5 @@
 {% extends 'layout.html' %} {% load static %} {% block index %}
-<div class="profile">
+<div id="profile" class="profile">
   <section class="profile_left">
     <h1> >
       <span
@@ -14,11 +14,32 @@
         <li><img src="{% static 'img/nodejslogo.png' %}" alt="reactlogo"></li>
         <li><img src="{% static 'img/dockerlogo.png' %}" alt="reactlogo"></li>
         <li><img src="{% static 'img/mongodblogo.png' %}" alt="reactlogo"></li>
-
     </ul>
   </section>
   <section class="profile_right">
     <img src="{% static 'img/img-me.png' %}" alt="profile image" />
+  </section>
+</div>
+<div id="education" class="education">
+  <section id="mvsk" class="education_item highschool" onclick="education_toggle(this.id)">
+    <img src="{% static 'img/mvsk.png' %}" alt="mvsk logo">
+    <div>
+      <h2>MAHAVAJIRAVUDH CHANGWATSONGKHLA SCHOOL</h2>
+      <h4>โรงเรียนมหาวชิราวุธ จังหวัดสงขลา</h4>
+      <div class="education_info mvsk_info" >
+        จบระดับชั้นมัธยมศึกษา สายการเรียน วิทยาศาสตร์-คณิตศาสตร์
+      </div>
+    </div>
+  </section>
+  <section id="kmitl" class="education_item university" onclick="education_toggle(this.id)" >
+    <img src="{% static 'img/kmitl.png' %}" alt="kmitl logo">
+    <div>
+      <h2>King Mongkut's Institute of Technology Ladkrabang</h2>
+      <h4>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h4>
+      <div class="education_info kmitl_info" >
+        กำลังศึกษาอยู่ชั้น ปริญญาตรี ชั้นปีที่ 3 คณะ วิศวกรรมศาสตร์ ภาควิชา วิศวกรรมคอมพิวเตอร์ สาขา วิศวกรรมสารสนเทศ
+      </div>
+    </div>
   </section>
 </div>
 {% endblock %}
