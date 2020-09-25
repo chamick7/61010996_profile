@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mymick import views
+from .views import home
 
 urlpatterns = [
-    path('', views.Home, name='home'),
+    path('', home, name='home'),
     
 ]

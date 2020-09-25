@@ -1,7 +1,8 @@
 {% extends 'layout.html' %} {% load static %} {% block index %}
 <div id="profile" class="profile">
   <section class="profile_left">
-    <h1> >
+    <h1>
+      >
       <span
         class="txt-rotate"
         data-period="2000"
@@ -9,11 +10,11 @@
       ></span>
     </h1>
     <ul class="profile_left_icon">
-        <li><img src="{% static 'img/codelogo.png' %}" alt="codelogo"></li>
-        <li><img src="{% static 'img/reactlogo.png' %}" alt="reactlogo"></li>
-        <li><img src="{% static 'img/nodejslogo.png' %}" alt="reactlogo"></li>
-        <li><img src="{% static 'img/dockerlogo.png' %}" alt="reactlogo"></li>
-        <li><img src="{% static 'img/mongodblogo.png' %}" alt="reactlogo"></li>
+      <li><img src="{% static 'img/codelogo.png' %}" alt="codelogo" /></li>
+      <li><img src="{% static 'img/reactlogo.png' %}" alt="reactlogo" /></li>
+      <li><img src="{% static 'img/nodejslogo.png' %}" alt="reactlogo" /></li>
+      <li><img src="{% static 'img/dockerlogo.png' %}" alt="reactlogo" /></li>
+      <li><img src="{% static 'img/mongodblogo.png' %}" alt="reactlogo" /></li>
     </ul>
   </section>
   <section class="profile_right">
@@ -21,25 +22,72 @@
   </section>
 </div>
 <div id="education" class="education">
-  <section id="mvsk" class="education_item highschool" onclick="education_toggle(this.id)">
-    <img src="{% static 'img/mvsk.png' %}" alt="mvsk logo">
+  <section
+    id="mvsk"
+    class="education_item highschool"
+    onclick="education_toggle(this.id)"
+  >
+    <img src="{% static 'img/mvsk.png' %}" alt="mvsk logo" />
     <div>
       <h2>MAHAVAJIRAVUDH CHANGWATSONGKHLA SCHOOL</h2>
       <h4>โรงเรียนมหาวชิราวุธ จังหวัดสงขลา</h4>
-      <div class="education_info mvsk_info" >
+      <div class="education_info mvsk_info">
         จบระดับชั้นมัธยมศึกษา สายการเรียน วิทยาศาสตร์-คณิตศาสตร์
       </div>
     </div>
   </section>
-  <section id="kmitl" class="education_item university" onclick="education_toggle(this.id)" >
-    <img src="{% static 'img/kmitl.png' %}" alt="kmitl logo">
+  <section
+    id="kmitl"
+    class="education_item university"
+    onclick="education_toggle(this.id)"
+  >
+    <img src="{% static 'img/kmitl.png' %}" alt="kmitl logo" />
     <div>
       <h2>King Mongkut's Institute of Technology Ladkrabang</h2>
       <h4>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h4>
-      <div class="education_info kmitl_info" >
-        กำลังศึกษาอยู่ชั้น ปริญญาตรี ชั้นปีที่ 3 คณะ วิศวกรรมศาสตร์ ภาควิชา วิศวกรรมคอมพิวเตอร์ สาขา วิศวกรรมสารสนเทศ
+      <div class="education_info kmitl_info">
+        กำลังศึกษาอยู่ชั้น ปริญญาตรี ชั้นปีที่ 3 คณะ วิศวกรรมศาสตร์ ภาควิชา
+        วิศวกรรมคอมพิวเตอร์ สาขา วิศวกรรมสารสนเทศ
       </div>
     </div>
   </section>
+</div>
+<div id="contact" class="contact">
+  <div class="contact_left">
+    <form method="POST" class="contact_form">
+      <h1>Contact Me</h1>
+      {% csrf_token %} {{ form }}
+      <input class="contact_submit" type="submit" value="send" />
+    </form>
+  </div>
+  <div class="contact_right">
+    <section class="contact_link">
+      <ul>
+        <a href="https://www.facebook.com/MickFillers/"
+          ><li>
+              <img src="{% static 'img/facebook.png' %}" alt="">
+          </li>
+        </a>
+        <a href="https://line.me/R/ti/p/~mick_ev"
+          ><li>
+              <img src="{% static 'img/line.png' %}" alt="">
+          </li>
+        </a>
+        <a href="https://github.com/chamick7"
+          ><li>
+              <img src="{% static 'img/github.png' %}" alt="">
+          </li>
+        </a>
+        <a href="https://www.instagram.com/cha_mick7/"
+          ><li>
+              <img src="{% static 'img/instagram.png' %}" alt="">
+          </li>
+        </a>
+      </ul>
+    </section>
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.810926963974!2d100.77603824935386!3d13.729894101455063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d664988a1bedf%3A0xcc678f180e221cd0!2z4Liq4LiW4Liy4Lia4Lix4LiZ4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li14Lie4Lij4Liw4LiI4Lit4Lih4LmA4LiB4Lil4LmJ4Liy4LmA4LiI4LmJ4Liy4LiE4Li44LiT4LiX4Lir4Liy4Lij4Lil4Liy4LiU4LiB4Lij4Liw4Lia4Lix4LiH!5e0!3m2!1sth!2sth!4v1601046056071!5m2!1sth!2sth"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+  </div>
 </div>
 {% endblock %}

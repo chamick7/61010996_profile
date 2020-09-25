@@ -8,6 +8,16 @@ html{
     scroll-behavior: smooth;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #ffae52;
+  }
+  
+  ::selection {
+    color: white;
+    background: #ffae52;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -50,8 +60,6 @@ nav i{
 .menu{
     width: 30%;
     margin-right: 10vw;
-
-
 }
 
 .nav_menu{
