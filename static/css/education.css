@@ -75,6 +75,27 @@
     .education_item {
         width: 85%;
     }
+    .education_item h2{
+        font-size: 16px;
+    }
+    .education_item h4{
+        font-size: 14px;
+    }
+
+
+}
+
+@media only screen and (max-width:300px){
+
+    .education_item {
+        width: 85%;
+    }
+    .education_item h2{
+        font-size: 14px;
+    }
+    .education_item h4{
+        font-size: 12px;
+    }
 
 
 }
